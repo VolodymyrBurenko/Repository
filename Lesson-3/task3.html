@@ -127,14 +127,14 @@
                                     let maxNum = 5;
                                     let randomNum = minNum + Math.floor(Math.random() * (maxNum - minNum + 1))
 
-                                    let num1 = parseInt(prompt("Введіть будь-яке число від 1 до 5. Спроба 1."));
+                                    let num = parseInt(prompt("Введіть будь-яке число від 1 до 5. Спроба 1."));
 
                                     let result;
 
                                     // Знаходимо результат
-                                    if (randomNum != num1) {
-                                        let num2 = parseInt(prompt("Введіть будь-яке число від 1 до 5. Спроба 2."));
-                                        if (randomNum != num2) {
+                                    if (randomNum != num) {
+                                        let num = parseInt(prompt("Введіть будь-яке число від 1 до 5. Спроба 2."));
+                                        if (randomNum != num) {
                                             result = `Ви не вгадали! Цифра ${randomNum}`;
                                             alert(`Ви не вгадали! Цифра ${randomNum}`);
                                             document.write(`${result}`);
