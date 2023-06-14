@@ -128,19 +128,23 @@
                                     let priceGoods = parseFloat(prompt("Введіть ціну товара"));
                                     let money = parseFloat(prompt("Введіть кількість грошей"));
 
-                                    const lottery = "4 грн.";
+                                    const lottery = 4;
 
                                     let result;
 
                                     // Знаходимо результат                                 
 
-                                    if ((money % priceGoods) > 0, money > priceGoods) {
-                                        result = `Дякуємо за покупку! Пропонуємо купити лотерею за ${lottery}`;
-                                        alert(`Дякуємо за покупку! Пропонуємо купити лотерею за ${lottery}`);
+                                    if (money < priceGoods) {
+                                        result = 'У Вас бракує коштів. У покупці відмовлено.';
+                                        alert(result);
+                                    }
+                                    else if ((money - priceGoods) < lottery) {
+                                        result = 'Дякуємо за покупку!';
+                                        alert(result);
                                     }
                                     else {
-                                        result = `У Вас бракує коштів. У покупці відмовлено.`;
-                                        alert(`У Вас бракує коштів. У покупці відмовлено.`);
+                                        result = `Дякуємо за покупку! Пропонуємо купити лотерею за ${lottery} грн.`;
+                                        alert(result);
                                     }
 
                                     // Виводимо результат
